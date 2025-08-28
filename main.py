@@ -32,7 +32,7 @@ def main():
         # Will need other squares to mask out the play area. Render everything outside the play area after this.
         
         screen.blit(title, (720, 0)) # Position title on screen
-        screen.blit(version, (1250, 710)) # Position version on screen
+        screen.blit(version, (1245, 710)) # Position version on screen
 
         pygame.display.flip()
 
