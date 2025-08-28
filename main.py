@@ -1,23 +1,23 @@
 import pygame
 from constants import *
 
+pygame.init()
+screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+dt = 0 # Delta time
+gameClock = pygame.time.Clock()
+
+titleFont = pygame.font.Font("HackedCRT.ttf", 24)
+gameFont = pygame.font.Font("RETROTECH.ttf", 12)
+title = titleFont.render("SECT0R", True, "white") # Title
+version = gameFont.render("v0.01", True, "white") # Version
+
+# Groups
+updatable = pygame.sprite.Group()
+drawable = pygame.sprite.Group()
+
 def main():
-    print("Hello from sect0r!")
-    print(f"Screen width: {SCREEN_WIDTH}")
-    print(f"Screen height: {SCREEN_HEIGHT}")
-
-    pygame.init()
-    dt = 0 # Delta time
-    gameClock = pygame.time.Clock()
-    screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-    titleFont = pygame.font.Font("HackedCRT.ttf", 24)
-    gameFont = pygame.font.Font("RETROTECH.ttf", 12)
-    title = titleFont.render("SECT0R", True, "white") # Title
-    version = gameFont.render("v0.01", True, "white") # Version
-
-    # Groups
-    updatable = pygame.sprite.Group()
-    drawable = pygame.sprite.Group()
+    # print(f"Screen width: {SCREEN_WIDTH}")
+    # print(f"Screen height: {SCREEN_HEIGHT}")
 
     # Game loop
     while game == True:
